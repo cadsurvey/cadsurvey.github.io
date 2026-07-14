@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cadsurvey.id - Cadastral Surveying Assistant</title>
+    <meta name="description" content="Portfolio of cadsurvey.id featuring our Cadastral Surveying Assistant applications for Indonesian Land Surveyors.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="assets/logo.png" alt="cadsurvey.id Logo" class="logo" id="main-logo">
+            <span class="brand-name">cadsurvey.id</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#features">Keunggulan</a></li>
+            <li><a href="#gallery">Galeri</a></li>
+            <li><a href="#apps">Aplikasi</a></li>
+            <li><button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme"><i class="fa-solid fa-sun"></i></button></li>
+        </ul>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>Asisten Survei Kadastral Terbaik</h1>
+            <p>Meningkatkan presisi dan efisiensi Surveyor Kadastral di seluruh Indonesia dengan teknologi modern.</p>
+            <a href="#features" class="btn primary-btn">Pelajari Lebih Lanjut <i class="fa-solid fa-arrow-down"></i></a>
+        </div>
+        <div class="hero-graphics">
+            <div class="glow-circle"></div>
+            <div class="hero-slider">
+                <img src="assets/mockup_map.png" class="slide-img active" alt="Map App Mockup">
+                <img src="assets/mockup_basic.png" class="slide-img" alt="Basic App Mockup">
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="about-section">
+        <h2 class="section-title">Tentang Aplikasi</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Asisten Survei Kadastral - Map Series</h3>
+                <p>Cadsurvey Assistant - Map Series adalah aplikasi asisten survei kadastral yang dirancang khusus untuk para surveyor pertanahan di Indonesia. Memudahkan pekerjaan lapangan dengan presisi tinggi.</p>
+                <div class="specs-grid">
+                    <div class="spec-item">
+                        <span class="spec-label">Sistem Koordinat</span>
+                        <span class="spec-value">Geodetik, UTM, TM3</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Zona UTM</span>
+                        <span class="spec-value">46 - 54</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Zona TM3</span>
+                        <span class="spec-value">46.1 - 54.2</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Cakupan Wilayah</span>
+                        <span class="spec-value">90&deg; - 144&deg; BT</span>
+                    </div>
+                    <div class="spec-item full-width">
+                        <span class="spec-label">Ellipsoid / Parameter WGS84</span>
+                        <span class="spec-value">a = 6.378.137 m &nbsp;|&nbsp; e&sup2; = 0,00669438</span>
+                    </div>
+                </div>
+                <div class="developer-info">
+                    <i class="fa-solid fa-code"></i> Developed for Indonesian Land Surveyors by Cadastral Surveying Assistant Team
+                </div>
+            </div>
+            <div class="about-image">
+                <div class="about-card-mock">
+                    <img src="assets/logo.png" alt="cadsurvey.id logo">
+                    <h4>CADSURVEY ASSISTANT</h4>
+                    <span>Map Series v1.4.1</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features-section">
+        <h2 class="section-title">Keunggulan Aplikasi</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-crosshairs"></i></div>
+                <h3>Akurasi Presisi Tinggi</h3>
+                <p>Menggunakan perhitungan modern untuk memastikan setiap pengukuran tanah dan titik koordinat berada pada tingkat presisi maksimal.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-bolt"></i></div>
+                <h3>Efisiensi di Lapangan</h3>
+                <p>Fitur pemetaan interaktif dan perhitungan otomatis yang dirancang khusus untuk mempercepat proses survei langsung di lokasi.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                <h3>Desain UI/UX Modern</h3>
+                <p>Antarmuka yang intuitif dan elegan dengan dukungan *Dark Mode* untuk kenyamanan mata surveyor saat bekerja sepanjang hari.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+        <h2 class="section-title">Galeri Aplikasi</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <div class="image-wrapper">
+                    <img src="assets/mockup_map.png" alt="Map Series Mockup">
+                    <div class="overlay">
+                        <span>Map Series Interface</span>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="image-wrapper">
+                    <img src="assets/mockup_basic.png" alt="Basic Series Mockup">
+                    <div class="overlay">
+                        <span>Basic Calculation Interface</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="apps" class="apps-section">
+        <h2 class="section-title">Daftar Aplikasi Kami</h2>
+        <div class="app-grid">
+            <!-- CAD Map Series App -->
+            <div class="app-card">
+                <div class="app-icon map-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                <h3>Cadsurvey Assist - Mapseries</h3>
+                <span class="version-badge">v1.4.1</span>
+                <p>Aplikasi andalan untuk Surveyor Kadastral Indonesia. Menawarkan fitur pemetaan tingkat lanjut, integrasi GPS real-time, dan kemampuan manajemen data survei di lapangan.</p>
+                <div class="tech-stack">
+                    <span><i class="fa-brands fa-flutter"></i> Flutter</span>
+                    <span><i class="fa-solid fa-location-arrow"></i> Geolocator</span>
+                </div>
+                <a href="https://github.com/saiful.aminx/PojectCSA" class="btn secondary-btn" target="_blank">Lihat Proyek</a>
+            </div>
+
+            <!-- CSA Basic App -->
+            <div class="app-card">
+                <div class="app-icon basic-icon"><i class="fa-solid fa-drafting-compass"></i></div>
+                <h3>Cadsurvey Assist Basic</h3>
+                <span class="version-badge">v1.2.7</span>
+                <p>Versi migrasi Flutter dari seri dasar. Menyediakan tools esensial dan kalkulator presisi untuk perhitungan survei harian yang cepat dan dapat diandalkan.</p>
+                <div class="tech-stack">
+                    <span><i class="fa-brands fa-flutter"></i> Flutter</span>
+                    <span><i class="fa-solid fa-mobile-screen"></i> Cross-Platform</span>
+                </div>
+                <a href="https://github.com/saiful.aminx/PojectCSA" class="btn secondary-btn" target="_blank">Lihat Proyek</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">Kontak & Programmer</h2>
+        <div class="contact-container">
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <h3>Tim Programmer</h3>
+                <p><strong>Cadastral Surveying Assistant Team</strong></p>
+                <p class="contact-desc">Dikembangkan secara khusus untuk mendukung kebutuhan Surveyor Pertanahan di Indonesia dengan berfokus pada presisi, kecepatan, dan kenyamanan pengguna.</p>
+                
+                <div class="contact-links">
+                    <a href="https://github.com/saiful.aminx" target="_blank" class="btn secondary-btn"><i class="fa-brands fa-github"></i> GitHub Profile</a>
+                    <a href="mailto:contact@cadsurvey.id" class="btn primary-btn"><i class="fa-solid fa-envelope"></i> Hubungi Kami</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h2>cadsurvey.id</h2>
+                <p>Inovasi Survei Kadastral di Ujung Jari Anda</p>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/saiful.aminx"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 cadsurvey.id. Hak cipta dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
