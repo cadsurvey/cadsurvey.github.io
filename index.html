@@ -20,7 +20,6 @@
         </div>
         <ul class="nav-links">
             <li><a href="#home">Beranda</a></li>
-            <li><a href="#about">Tentang</a></li>
             <li><a href="#features">Keunggulan</a></li>
             <li><a href="#gallery">Galeri</a></li>
             <li><a href="#apps">Aplikasi</a></li>
@@ -60,49 +59,6 @@
         </div>
     </header>
 
-    <section id="about" class="about-section">
-        <h2 class="section-title">Tentang Aplikasi</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <h3>Asisten Survei Kadastral - Map Series</h3>
-                <p>Cadsurvey Assistant - Map Series adalah aplikasi asisten survei kadastral yang dirancang khusus untuk
-                    para surveyor pertanahan di Indonesia. Memudahkan pekerjaan lapangan dengan presisi tinggi.</p>
-                <div class="specs-grid">
-                    <div class="spec-item">
-                        <span class="spec-label">Sistem Koordinat</span>
-                        <span class="spec-value">Geodetik, UTM, TM3</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Zona UTM</span>
-                        <span class="spec-value">46 - 54</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Zona TM3</span>
-                        <span class="spec-value">46.1 - 54.2</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-label">Cakupan Wilayah</span>
-                        <span class="spec-value">90&deg; - 144&deg; BT</span>
-                    </div>
-                    <div class="spec-item full-width">
-                        <span class="spec-label">Ellipsoid / Parameter WGS84</span>
-                        <span class="spec-value">a = 6.378.137 m &nbsp;|&nbsp; e&sup2; = 0,00669438</span>
-                    </div>
-                </div>
-                <div class="developer-info">
-                    <i class="fa-solid fa-code"></i> Developed for Indonesian Land Surveyors by Cadastral Surveying
-                    Assistant Team
-                </div>
-            </div>
-            <div class="about-image">
-                <div class="about-card-mock">
-                    <img src="assets/logo.png" alt="cadsurvey.id logo">
-                    <h4>CADSURVEY ASSISTANT</h4>
-                    <span>Map Series v1.4.1</span>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <section id="features" class="features-section">
         <h2 class="section-title">Keunggulan Aplikasi</h2>
@@ -217,10 +173,155 @@
                 <a href="https://github.com/saiful.aminx"><i class="fa-brands fa-github"></i></a>
             </div>
         </div>
+        <div class="footer-links">
+            <a href="#" id="open-privacy" class="footer-link">Kebijakan Privasi</a>
+            <span class="footer-divider">·</span>
+            <a href="#" id="open-terms" class="footer-link">Syarat & Ketentuan</a>
+        </div>
         <div class="footer-bottom">
             <p>&copy; 2026 cadsurvey.id. Hak cipta dilindungi.</p>
         </div>
     </footer>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacy-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="privacy-title">
+        <div class="modal-box">
+            <button class="modal-close" id="close-privacy" aria-label="Tutup">&times;</button>
+            <div class="modal-header">
+                <div class="modal-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <h2 id="privacy-title">Kebijakan Privasi</h2>
+                <p class="modal-subtitle">Berlaku sejak 1 Januari 2026 · cadsurvey.id</p>
+            </div>
+            <div class="modal-body">
+                <div class="policy-block">
+                    <h3><i class="fa-solid fa-circle-info"></i> Pendahuluan</h3>
+                    <p>Selamat datang di <strong>cadsurvey.id</strong>. Kami berkomitmen untuk melindungi privasi dan keamanan data pengguna aplikasi <em>Cadastral Surveying Assistant</em> (CSA). Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, menyimpan, dan melindungi informasi Anda saat menggunakan aplikasi kami.</p>
+                </div>
+
+                <div class="policy-block">
+                    <h3><i class="fa-solid fa-database"></i> Data yang Kami Kumpulkan</h3>
+                    <p>Aplikasi CSA dapat mengumpulkan jenis data berikut:</p>
+                    <ul>
+                        <li><strong>Data Lokasi (GPS):</strong> Digunakan secara real-time untuk fungsi survei dan pemetaan di lapangan. Data lokasi <em>tidak disimpan</em> di server kami.</li>
+                        <li><strong>Data Survei:</strong> Hasil perhitungan koordinat, titik ukur, dan data lapangan yang Anda buat tersimpan secara lokal di perangkat Anda.</li>
+                        <li><strong>Data Diagnostik:</strong> Informasi teknis anonim (versi OS, tipe perangkat, laporan crash) untuk meningkatkan kualitas aplikasi.</li>
+                        <li><strong>Informasi Akun (opsional):</strong> Nama dan alamat email jika Anda mendaftar untuk fitur sinkronisasi cloud.</li>
+                    </ul>
+                </div>
+
+                <div class="policy-block">
+                    <h3><i class="fa-solid fa-gears"></i> Cara Penggunaan Data</h3>
+                    <p>Data yang kami kumpulkan digunakan untuk tujuan berikut:</p>
+                    <ul>
+                        <li>Menyediakan dan meningkatkan fitur aplikasi survei kadastral.</li>
+                        <li>Menganalisis performa dan memperbaiki bug pada aplikasi.</li>
+                        <li>Mengirimkan pembaruan dan notifikasi teknis terkait aplikasi.</li>
+                        <li>Memenuhi kewajiban hukum yang berlaku di Indonesia.</li>
+                    </ul>
+                </div>
+
+                <div class="policy-block">
+                    <h3><i class="fa-solid fa-share-nodes"></i> Berbagi Data dengan Pihak Ketiga</h3>
+                    <p>Kami <strong>tidak menjual</strong> data pribadi Anda kepada pihak ketiga. Data hanya dapat dibagikan dalam kondisi berikut:</p>
+                    <ul>
+                        <li><strong>Penyedia Layanan:</strong> Mitra teknis terpercaya (seperti layanan crash reporting) dengan perjanjian kerahasiaan data.</li>
+                        <li><strong>Kewajiban Hukum:</strong> Jika diwajibkan oleh peraturan perundang-undangan yang berlaku.</li>
+                        <li><strong>Persetujuan Pengguna:</strong> Jika Anda secara eksplisit memberikan izin.</li>
+                    </ul>
+                </div>
+
+                <div class="policy-block">
+                    <h3><i class="fa-solid fa-lock"></i> Keamanan Data</h3>
+                    <p>Kami menerapkan langkah-langkah keamanan teknis dan organisasi yang sesuai, termasuk enkripsi data saat transit dan penyimpanan data lokal yang terlindungi. Namun, tidak ada metode transmisi internet yang 100% aman.</p>
+                </div>
+
+                <div class="policy-block">
+                    <h3><i class="fa-solid fa-user-shield"></i> Hak Pengguna</h3>
+                    <p>Sesuai dengan UU Perlindungan Data Pribadi Indonesia, Anda berhak untuk:</p>
+                    <ul>
+                        <li>Mengakses data pribadi yang kami simpan tentang Anda.</li>
+                        <li>Meminta koreksi data yang tidak akurat.</li>
+                        <li>Meminta penghapusan data Anda dari sistem kami.</li>
+                        <li>Menarik kembali persetujuan penggunaan data kapan saja.</li>
+                    </ul>
+                    <p>Untuk menggunakan hak-hak Anda, hubungi kami di <a href="mailto:contact@cadsurvey.id" class="policy-link">contact@cadsurvey.id</a>.</p>
+                </div>
+
+                <div class="policy-block">
+                    <h3><i class="fa-solid fa-rotate"></i> Perubahan Kebijakan</h3>
+                    <p>Kami dapat memperbarui Kebijakan Privasi ini dari waktu ke waktu. Perubahan signifikan akan diberitahukan melalui notifikasi dalam aplikasi atau email. Penggunaan aplikasi setelah pembaruan berarti Anda menerima kebijakan yang diperbarui.</p>
+                </div>
+
+                <div class="policy-block policy-contact">
+                    <h3><i class="fa-solid fa-envelope"></i> Hubungi Kami</h3>
+                    <p>Jika ada pertanyaan mengenai Kebijakan Privasi ini, silakan hubungi:</p>
+                    <p><strong>Cadastral Surveying Assistant Team</strong><br>
+                    Email: <a href="mailto:contact@cadsurvey.id" class="policy-link">contact@cadsurvey.id</a><br>
+                    Website: <a href="https://cadsurvey.id" class="policy-link" target="_blank">cadsurvey.id</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms & Conditions Modal -->
+    <div id="terms-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="terms-title">
+        <div class="modal-box">
+            <button class="modal-close" id="close-terms" aria-label="Tutup">&times;</button>
+            <div class="modal-header">
+                <div class="modal-icon"><i class="fa-solid fa-file-contract"></i></div>
+                <h2 id="terms-title">Syarat &amp; Ketentuan</h2>
+                <p class="modal-subtitle">Berlaku sejak 1 Januari 2026 · cadsurvey.id</p>
+            </div>
+            <div class="modal-body">
+                <div class="policy-block">
+                    <h3><i class="fa-solid fa-circle-info"></i> Penerimaan Syarat</h3>
+                    <p>Dengan mengunduh, memasang, atau menggunakan aplikasi <strong>Cadsurvey Assistant</strong>, Anda setuju untuk terikat oleh Syarat & Ketentuan ini. Jika Anda tidak menyetujui syarat ini, harap jangan menggunakan aplikasi kami.</p>
+                </div>
+
+                <div class="policy-block">
+                    <h3><i class="fa-solid fa-mobile-screen"></i> Penggunaan Aplikasi</h3>
+                    <p>Aplikasi CSA dirancang khusus untuk mendukung kegiatan survei kadastral profesional. Pengguna dilarang:</p>
+                    <ul>
+                        <li>Menggunakan aplikasi untuk tujuan yang melanggar hukum atau regulasi pertanahan Indonesia.</li>
+                        <li>Merekayasa balik, mendekompilasi, atau memodifikasi kode aplikasi.</li>
+                        <li>Mendistribusikan atau menjual kembali aplikasi tanpa izin tertulis dari kami.</li>
+                        <li>Menggunakan aplikasi untuk menghasilkan data survei palsu atau menyesatkan.</li>
+                    </ul>
+                </div>
+
+                <div class="policy-block">
+                    <h3><i class="fa-solid fa-copyright"></i> Hak Kekayaan Intelektual</h3>
+                    <p>Seluruh konten, fitur, dan fungsi aplikasi CSA — termasuk tetapi tidak terbatas pada teks, grafis, logo, ikon, dan kode — adalah milik eksklusif <strong>Cadastral Surveying Assistant Team</strong> dan dilindungi oleh hukum hak cipta Indonesia dan internasional.</p>
+                </div>
+
+                <div class="policy-block">
+                    <h3><i class="fa-solid fa-triangle-exclamation"></i> Batasan Tanggung Jawab</h3>
+                    <p>Aplikasi CSA disediakan <em>"sebagaimana adanya"</em>. Meskipun kami berusaha keras menjaga akurasi, kami tidak bertanggung jawab atas:</p>
+                    <ul>
+                        <li>Kesalahan perhitungan yang disebabkan oleh data input yang tidak akurat dari pengguna.</li>
+                        <li>Kerugian yang timbul akibat penggunaan hasil survei di luar konteks profesional.</li>
+                        <li>Gangguan layanan akibat kondisi di luar kendali kami (force majeure).</li>
+                    </ul>
+                </div>
+
+                <div class="policy-block">
+                    <h3><i class="fa-solid fa-star"></i> Pembaruan Aplikasi</h3>
+                    <p>Kami berhak memperbarui, memodifikasi, atau menghentikan layanan kapan saja tanpa pemberitahuan sebelumnya. Kami tidak bertanggung jawab atas gangguan yang disebabkan oleh pembaruan tersebut.</p>
+                </div>
+
+                <div class="policy-block">
+                    <h3><i class="fa-solid fa-scale-balanced"></i> Hukum yang Berlaku</h3>
+                    <p>Syarat & Ketentuan ini diatur oleh dan ditafsirkan sesuai dengan hukum Negara Kesatuan Republik Indonesia. Setiap sengketa yang timbul akan diselesaikan melalui pengadilan yang berwenang di Indonesia.</p>
+                </div>
+
+                <div class="policy-block policy-contact">
+                    <h3><i class="fa-solid fa-envelope"></i> Pertanyaan</h3>
+                    <p>Untuk pertanyaan terkait Syarat & Ketentuan, hubungi kami di:<br>
+                    <a href="mailto:contact@cadsurvey.id" class="policy-link">contact@cadsurvey.id</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
