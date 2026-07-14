@@ -1,5 +1,5 @@
 :root {
-    --bg-color: #080A0F; /* Slightly darker */
+    --bg-color: #080A0F;
     --surface-color: #121620;
     --primary-color: #00E5FF;
     --secondary-color: #3D5AFE;
@@ -120,7 +120,7 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 0 10%;
+    padding: 100px 10% 60px;
     position: relative;
     background: radial-gradient(circle at top right, rgba(61,90,254,0.1), transparent 50%),
                 radial-gradient(circle at bottom left, rgba(0,229,255,0.05), transparent 50%);
@@ -136,15 +136,80 @@ body {
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 25px;
-    background: linear-gradient(135deg, #FFF, #A0ABBA);
+    background: linear-gradient(135deg, var(--text-main), var(--text-muted));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    transition: all 0.5s ease;
 }
 
 .hero p {
     font-size: 1.25rem;
     color: var(--text-muted);
-    margin-bottom: 45px;
+    margin-bottom: 35px;
+    transition: all 0.5s ease;
+}
+
+.hero-cta-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+/* Store Buttons inside Hero */
+.store-links {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+    margin-bottom: 28px;
+}
+
+.store-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, rgba(0, 229, 255, 0.08), rgba(61, 90, 254, 0.12));
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    border-radius: 14px;
+    padding: 10px 18px;
+    text-decoration: none;
+    color: var(--text-main);
+    transition: all 0.3s ease;
+}
+
+.store-btn i.fa-google-play {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+.store-btn-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.store-label {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1;
+}
+
+.store-appname {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-main);
+    line-height: 1.3;
+}
+
+.store-btn:hover {
+    background: linear-gradient(135deg, rgba(0, 229, 255, 0.18), rgba(61, 90, 254, 0.25));
+    border-color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 229, 255, 0.2);
 }
 
 .btn {
@@ -235,6 +300,16 @@ body {
     z-index: 10;
 }
 
+/* Hero text animation */
+.hero-text-anim {
+    animation: slideText 0.7s ease;
+}
+
+@keyframes slideText {
+    0%   { opacity: 0; transform: translateY(12px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
 /* Contact Section */
 .contact-section {
     background-color: var(--surface-color);
@@ -317,6 +392,7 @@ section.active {
     -webkit-text-fill-color: transparent;
     font-weight: 800;
 }
+
 /* About Section */
 .about-section {
     background-color: var(--bg-color);
@@ -487,7 +563,7 @@ section.active {
 .feature-card h3 {
     font-size: 1.4rem;
     margin-bottom: 15px;
-    color: #FFF;
+    color: var(--text-main);
 }
 
 .feature-card p {
@@ -522,7 +598,7 @@ section.active {
     position: relative;
     width: 100%;
     height: 0;
-    padding-bottom: 60%; /* Aspect ratio */
+    padding-bottom: 60%;
 }
 
 .image-wrapper img {
@@ -667,7 +743,7 @@ section.active {
     background: rgba(255,255,255,0.03);
     padding: 8px 16px;
     border-radius: 12px;
-    color: #E2E8F0;
+    color: var(--text-main);
     display: flex;
     align-items: center;
     gap: 8px;
@@ -749,4 +825,5 @@ footer {
     .nav-links { display: none; }
     .footer-content { flex-direction: column; text-align: center; gap: 30px; }
     .contact-links { flex-direction: column; }
+    .store-links { justify-content: center; }
 }
