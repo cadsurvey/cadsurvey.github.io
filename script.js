@@ -51,18 +51,62 @@ document.addEventListener('DOMContentLoaded', () => {
     }, {threshold: 0.2});
     document.querySelectorAll('section').forEach(sec => observer.observe(sec));
 
-    // Smooth scroll for anchor links
+    // Smooth scroll for anchor links (exclude modal triggers)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            // Skip modal trigger links
+            if (this.id === 'open-privacy' || this.id === 'open-terms') return;
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const target = document.querySelector(href);
             if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
+                target.scrollIntoView({ behavior: 'smooth' });
             }
         });
     });
+
+    // Modal logic
+    function openModal(modalId) {
+        const modal = document.getElementById(modalId);
+        if (!modal) return;
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(modalId) {
+        const modal = document.getElementById(modalId);
+        if (!modal) return;
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    document.getElementById('open-privacy').addEventListener('click', (e) => {
+        e.preventDefault();
+        openModal('privacy-modal');
+    });
+
+    document.getElementById('open-terms').addEventListener('click', (e) => {
+        e.preventDefault();
+        openModal('terms-modal');
+    });
+
+    document.getElementById('close-privacy').addEventListener('click', () => closeModal('privacy-modal'));
+    document.getElementById('close-terms').addEventListener('click', () => closeModal('terms-modal'));
+
+    // Close on overlay click
+    document.querySelectorAll('.modal-overlay').forEach(overlay => {
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) closeModal(overlay.id);
+        });
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            document.querySelectorAll('.modal-overlay.active').forEach(m => closeModal(m.id));
+        }
+    });
+
 
     // Theme Toggle Logic
     const themeToggle = document.getElementById('theme-toggle');
